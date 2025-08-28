@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<!-- 
+    <!DOCTYPE html> 
+    Declares the document as HTML5 (latest standard).
+    Interview Q: What happens if we don’t use DOCTYPE?
+    A: Browser may enter "quirks mode", breaking modern layout/standards.
+-->
+<html lang="en">
+<!-- 'lang' improves accessibility and SEO -->
+<head>
+    <meta charset="UTF-8">
+    <!-- 
+        Ensures page supports most global characters.
+        Interview Q: Why UTF-8?
+        A: Covers almost all symbols, emojis, languages.
+    -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 
+        Makes website responsive on mobile devices.
+        Q: What does viewport meta do?
+    -->
+
+    <meta name="description" content="Complete HTML Reference with Interview Questions">
+    <meta name="keywords" content="HTML, Web Development, Interview Prep">
+    <meta name="author" content="Swati Singh">
+    <!-- SEO-related metadata -->
+
+    <meta http-equiv="refresh" content="60">
+    <!-- Refreshes page every 60 seconds. Rare use. -->
+
+    <base href="https://example.com/">
+    <!-- Sets base URL for all relative links. -->
+
+    <title>Ultimate HTML Master File</title>
+
+    <link rel="icon" href="favicon.ico">
+    <!-- Favicon shown in tab. -->
+
+    <!-- Open Graph for Social Media -->
+    <meta property="og:title" content="HTML Master File">
+    <meta property="og:description" content="All HTML concepts explained with interview questions">
+    <meta property="og:type" content="website">
+</head>
+
+<body>
+    <!-- ==================== BASIC STRUCTURE ==================== -->
+    <h1>Main Heading</h1>
+    <h2>Sub Heading</h2>
+    <p>This is a paragraph.</p>
+    <!-- 
+        Q: Difference between <title> and <h1>?
+        A: <title> is metadata (tab name, SEO), <h1> is visible content.
+    -->
+
+    Line one <br> Line two <hr>
+    <!-- 
+        <br> = line break 
+        <hr> = thematic horizontal line
+    -->
+
+    <!-- ==================== TEXT FORMATTING ==================== -->
+    <b>Bold (non-semantic)</b>
+    <strong>Strong (semantic)</strong>
+    <i>Italic</i>
+    <em>Emphasis (semantic)</em>
+    <u>Underline</u>
+    <mark>Highlighted</mark>
+    <small>Small</small>
+    <del>Deleted</del>
+    <ins>Inserted</ins>
+    <!-- 
+        Q: Difference between <b> and <strong>?
+        A: <strong> has semantic meaning (important), <b> is just visual.
+    -->
+
+    <!-- ==================== LISTS ==================== -->
+    <ul>
+        <li>Unordered item</li>
+    </ul>
+    <ol>
+        <li>Ordered item</li>
+    </ol>
+    <dl>
+        <dt>HTML</dt>
+        <dd>HyperText Markup Language</dd>
+    </dl>
+    <!-- Q: Difference between <ol>, <ul>, <dl>? -->
+
+    <!-- ==================== LINKS & IMAGES ==================== -->
+    <a href="https://google.com" target="_blank">Google</a>
+    <!-- target="_blank" = opens new tab -->
+
+    <img src="https://via.placeholder.com/150" alt="Placeholder">
+    <!-- Q: Why is alt important? (Accessibility + SEO) -->
+
+    <!-- ==================== TABLES ==================== -->
+    <table border="1">
+        <caption>Student Info</caption>
+        <tr>
+            <th>Name</th>
+            <th>Roll</th>
+        </tr>
+        <tr>
+            <td>Swati</td>
+            <td>01</td>
+        </tr>
+    </table>
+    <!-- Q: Difference between <th> and <td>? -->
+
+    <!-- ==================== FORMS ==================== -->
+    <form method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required placeholder="Enter name">
+        <input type="email" placeholder="Email">
+        <input type="password" placeholder="Password">
+        <input type="radio" name="gender"> Male
+        <input type="radio" name="gender"> Female
+        <input type="checkbox"> Subscribe
+        <textarea rows="3">Your message</textarea>
+        <select>
+            <option>Option 1</option>
+            <option>Option 2</option>
+        </select>
+        <button type="submit">Submit</button>
+    </form>
+    <!-- Q: Difference between GET and POST? -->
+
+    <!-- HTML5 New Input Types -->
+    <input type="date">
+    <input type="color">
+    <input type="range" min="0" max="100">
+    <input type="file">
+    <input type="number" min="1" max="10">
+    <!-- Q: Which input types are new in HTML5? -->
+
+    <!-- ==================== SEMANTIC TAGS ==================== -->
+    <header>Header Area</header>
+    <nav>Navigation Menu</nav>
+    <section>Section Content</section>
+    <article>Independent Article</article>
+    <aside>Sidebar</aside>
+    <footer>Footer</footer>
+    <!-- Q: Why use semantic tags? -->
+
+    <!-- ==================== MULTIMEDIA ==================== -->
+    <audio controls>
+        <source src="audio.mp3" type="audio/mpeg">
+        Audio not supported.
+    </audio>
+
+    <video controls width="200">
+        <source src="video.mp4" type="video/mp4">
+        Video not supported.
+    </video>
+
+    <!-- Responsive Images -->
+    <picture>
+        <source srcset="small.jpg" media="(max-width:600px)">
+        <source srcset="large.jpg" media="(min-width:601px)">
+        <img src="default.jpg" alt="Responsive Image">
+    </picture>
+    <!-- Q: Why <picture> over <img>? -->
+
+    <!-- Video with Captions -->
+    <video controls>
+        <source src="movie.mp4" type="video/mp4">
+        <track kind="subtitles" src="subs.vtt" srclang="en" label="English">
+    </video>
+    <!-- Q: Use of <track>? (captions/subtitles) -->
+
+    <!-- ==================== CANVAS & SVG ==================== -->
+    <canvas id="myCanvas" width="150" height="100"></canvas>
+    <!-- JS can draw shapes -->
+
+    <svg width="100" height="100">
+        <circle cx="50" cy="50" r="40" fill="yellow" stroke="green" />
+    </svg>
+    <!-- Q: Difference between canvas & svg? -->
+
+    <!-- ==================== ADVANCED TAGS ==================== -->
+    <progress value="50" max="100"></progress>
+    <meter value="0.7">70%</meter>
+    <!-- Q: Difference between progress & meter? -->
+
+    <details>
+        <summary>Click me</summary>
+        Hidden details text...
+    </details>
+    <!-- Used for collapsible content -->
+
+    <dialog open>This is a dialog box</dialog>
+    <!-- Q: Difference from JS alert()? -->
+
+    <template id="temp">
+        <p>This is hidden until cloned by JS</p>
+    </template>
+
+    <custom-el>
+        <span slot="title">Custom Title</span>
+    </custom-el>
+    <!-- Slot used in Web Components -->
+
+    <!-- ==================== SPECIAL ATTRIBUTES ==================== -->
+    <p contenteditable="true" spellcheck="true">Editable text</p>
+    <div draggable="true">Drag me</div>
+    <p hidden>Hidden text</p>
+    <!-- Q: Difference hidden vs display:none? -->
+
+    <div data-user-id="123" data-role="admin">User Info</div>
+    <!-- Q: What are data-* attributes? -->
+
+    <!-- ==================== IFRAMES ==================== -->
+    <iframe src="https://example.com" width="300" height="200"></iframe>
+    <!-- Q: Security issues with iframes? -->
+
+    <!-- ==================== ENTITIES ==================== -->
+    <p>5 &lt; 10 &copy; 2025</p>
+    <!-- Used to display reserved characters -->
+
+    <!-- ==================== DEPRECATED TAGS ==================== -->
+    <marquee>Scrolling text</marquee>
+    <center>Centered</center>
+    <blink>Blinking</blink>
+    <!-- Q: Why avoid deprecated tags? -->
+
+    <!-- ==================== SCRIPT VARIATIONS ==================== -->
+    <script src="app.js" async></script>
+    <script src="app.js" defer></script>
+    <script type="module">
+        // Modern ES6 JS
+    </script>
+    <!-- 
+        Q: Difference async vs defer?
+        async = loads & executes immediately 
+        defer = loads parallel, executes after HTML parsed
+    -->
+
+    <!-- ==================== NOSCRIPT ==================== -->
+    <noscript>Your browser does not support JS</noscript>
+</body>
+</html>
